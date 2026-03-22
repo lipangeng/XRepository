@@ -1,0 +1,23 @@
+{
+  "name": "xnexus-web",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": ["host", "mfe-*"],
+  "scripts": {
+    "dev:host": "npm run dev --workspace=host",
+    "dev:repo": "npm run dev --workspace=mfe-repo",
+    "dev:task": "npm run dev --workspace=mfe-task",
+    "dev:setting": "npm run dev --workspace=mfe-setting",
+    "dev:all": "concurrently \"npm run dev:host\" \"npm run dev:repo\" \"npm run dev:task\" \"npm run dev:setting\"",
+    "build:host": "npm run build --workspace=host",
+    "build:repo": "npm run build --workspace=mfe-repo",
+    "build:task": "npm run build --workspace=mfe-task",
+    "build:setting": "npm run build --workspace=mfe-setting",
+    "build:all": "npm run build:host && npm run build:repo && npm run build:task && npm run build:setting",
+    "test": "vitest",
+    "lint": "eslint . --ext ts,tsx"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
