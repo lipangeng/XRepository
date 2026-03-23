@@ -34,16 +34,21 @@
 
 **核心原则**：
 - **1 个用户入口**：Host 应用 (:3000)，用户只访问这一个端口
-- **N 个插件模块**：MFEs 作为可插拔组件，开发时在独立端口提供资源
+- **N 个插件模块**：MFEs 作为可插拔组件，由 Host 动态加载
 - **动态加载**：Host 通过 Module Federation 运行时加载 MFE 代码
 
 **开发工作流**：
 ```bash
-# 启动所有服务（Host + MFEs）
-cd web && npm run dev:all
+cd web
 
-# 用户访问：http://localhost:3000
-# MFEs 在后台运行 (:3001/:3002/:3003)，用户不可直接访问
+# 方式 1: 只启动 Host (使用已构建的 MFEs)
+npm run dev
+
+# 方式 2: 开发 MFE 插件 (需要先构建 MFEs)
+# 先构建所有 MFEs
+npm run build:all
+# 然后启动 Host
+npm run dev
 ```
 
 **生产部署**：
@@ -73,8 +78,11 @@ cd web
 # 安装依赖
 npm install
 
-# 开发模式（启动所有服务）
-npm run dev:all
+# 构建 MFEs (首次运行或修改 MFE 后)
+npm run build:all
+
+# 启动 Host (用户唯一入口 :3000)
+npm run dev
 
 # 访问：http://localhost:3000
 ```

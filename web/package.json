@@ -4,11 +4,8 @@
   "private": true,
   "workspaces": ["host", "mfe-*"],
   "scripts": {
+    "dev": "npm run dev:host",
     "dev:host": "npm run dev --workspace=host",
-    "dev:repo": "npm run dev --workspace=mfe-repo",
-    "dev:task": "npm run dev --workspace=mfe-task",
-    "dev:setting": "npm run dev --workspace=mfe-setting",
-    "dev:all": "concurrently \"npm run dev:host\" \"npm run dev:repo\" \"npm run dev:task\" \"npm run dev:setting\"",
     "build:host": "npm run build --workspace=host",
     "build:repo": "npm run build --workspace=mfe-repo",
     "build:task": "npm run build --workspace=mfe-task",
