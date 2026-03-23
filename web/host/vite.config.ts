@@ -34,4 +34,7 @@ export default defineConfig({
       'host': '/src',
     },
   },
+  optimizeDeps: {
+    exclude: ['mfe-repo', 'mfe-task', 'mfe-setting'],
+  },
 })

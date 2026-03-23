@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom'
 import { useTasks } from '../hooks/use-tasks'
-import { Card } from 'host/components/ui/Card'
-import { Table, TableHeader, TableBody, TableRow, TableCell, TableHead } from 'host/components/ui/Table'
-import { Button } from 'host/components/ui/Button'
-import { LoadingPage } from 'host/components/ui/Loading'
+import { Card } from '../components/ui/Card'
+import { Table, TableHeader, TableBody, TableRow, TableCell, TableHead } from '../components/ui/Table'
+import { Button } from '../components/ui/Button'
+import { LoadingPage } from '../components/ui/Loading'
 
 export function TaskList() {
   const { data: tasks, isLoading } = useTasks()

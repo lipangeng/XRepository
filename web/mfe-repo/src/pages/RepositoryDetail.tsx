@@ -1,8 +1,8 @@
 import { useParams, Link } from 'react-router-dom'
 import { useRepo } from '../hooks/use-repos'
-import { Card } from 'host/components/ui/Card'
-import { Button } from 'host/components/ui/Button'
-import { LoadingPage } from 'host/components/ui/Loading'
+import { Card } from '../components/ui/Card'
+import { Button } from '../components/ui/Button'
+import { LoadingPage } from '../components/ui/Loading'
 
 export function RepositoryDetail() {
   const { repoName } = useParams<{ repoName: string }>()

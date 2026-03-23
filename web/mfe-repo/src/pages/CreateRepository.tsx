@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { Button } from 'host/components/ui/Button'
-import { Card, CardHeader, CardTitle, CardContent } from 'host/components/ui/Card'
+import { Button } from '../components/ui/Button'
+import { Card, CardHeader, CardTitle, CardContent } from '../components/ui/Card'
 import { useCreateRepo } from '../hooks/use-repos'
 
 export function CreateRepository() {

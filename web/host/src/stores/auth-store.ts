@@ -73,6 +73,8 @@ api.interceptors.request.use((config) => {
   return config
 })
 
-export const { login, logout, restoreAuth } = authStore
+export const login = authStore.getState().login
+export const logout = authStore.getState().logout
+export const restoreAuth = authStore.getState().restoreAuth
 export const useAuth = () => authStore()
 export { api }

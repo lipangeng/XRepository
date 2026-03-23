@@ -1,7 +1,7 @@
-import { useState, useRef } from 'react'
+import { useState } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
-import { Button } from 'host/components/ui/Button'
-import { Card, CardHeader, CardTitle, CardContent } from 'host/components/ui/Card'
+import { Button } from '../components/ui/Button'
+import { Card, CardHeader, CardTitle, CardContent } from '../components/ui/Card'
 
 export function UploadArtifact() {
   const { repoName } = useParams<{ repoName: string }>()
@@ -51,7 +51,6 @@ export function UploadArtifact() {
                 type="file"
                 onChange={(e) => setFile(e.target.files?.[0] || null)}
                 className="w-full px-3 py-2 border border-border rounded-md bg-background"
-                required
               />
             </div>
             {file && (

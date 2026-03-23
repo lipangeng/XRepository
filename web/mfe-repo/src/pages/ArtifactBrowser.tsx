@@ -1,7 +1,7 @@
 import { useParams } from 'react-router-dom'
-import { Card } from 'host/components/ui/Card'
-import { Table, TableBody, TableRow, TableCell, TableHead } from 'host/components/ui/Table'
-import { Button } from 'host/components/ui/Button'
+import { Card } from '../components/ui/Card'
+import { Table, TableBody, TableRow, TableCell, TableHead } from '../components/ui/Table'
+import { Button } from '../components/ui/Button'
 
 export function ArtifactBrowser() {
   const { repoName } = useParams<{ repoName: string }>()

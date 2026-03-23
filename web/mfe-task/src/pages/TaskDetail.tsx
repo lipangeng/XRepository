@@ -1,7 +1,7 @@
 import { useParams } from 'react-router-dom'
 import { useTask } from '../hooks/use-tasks'
-import { Card } from 'host/components/ui/Card'
-import { LoadingPage } from 'host/components/ui/Loading'
+import { Card } from '../components/ui/Card'
+import { LoadingPage } from '../components/ui/Loading'
 
 export function TaskDetail() {
   const { id } = useParams<{ id: string }>()

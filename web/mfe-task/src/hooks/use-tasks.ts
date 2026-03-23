@@ -1,5 +1,5 @@
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query'
-import { taskApi } from 'host/services/api'
+import { taskApi } from '../services/api'
 
 export function useTasks() {
   return useQuery({

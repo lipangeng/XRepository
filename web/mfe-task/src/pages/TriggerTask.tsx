@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useTriggerTask } from '../hooks/use-tasks'
-import { Card, CardHeader, CardTitle, CardContent } from 'host/components/ui/Card'
-import { Button } from 'host/components/ui/Button'
+import { Card, CardHeader, CardTitle, CardContent } from '../components/ui/Card'
+import { Button } from '../components/ui/Button'
 
 export function TriggerTask() {
   const navigate = useNavigate()

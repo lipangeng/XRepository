@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import { Card, CardHeader, CardTitle, CardContent } from 'host/components/ui/Card'
-import { Button } from 'host/components/ui/Button'
+import { Card, CardHeader, CardTitle, CardContent } from '../components/ui/Card'
+import { Button } from '../components/ui/Button'
 
 export function SystemSettings() {
   const [settings, setSettings] = useState({

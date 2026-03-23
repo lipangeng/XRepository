@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom'
 import { useRepos, useDeleteRepo } from '../hooks/use-repos'
-import { Button } from 'host/components/ui/Button'
-import { Card } from 'host/components/ui/Card'
-import { Table, TableHeader, TableBody, TableRow, TableCell, TableHead } from 'host/components/ui/Table'
-import { LoadingPage } from 'host/components/ui/Loading'
+import { Button } from '../components/ui/Button'
+import { Card } from '../components/ui/Card'
+import { Table, TableHeader, TableBody, TableRow, TableCell, TableHead } from '../components/ui/Table'
+import { LoadingPage } from '../components/ui/Loading'
 
 export function RepositoryList() {
   const { data: repos, isLoading, error } = useRepos()

@@ -1,5 +1,5 @@
-import { Card } from 'host/components/ui/Card'
-import { Button } from 'host/components/ui/Button'
+import { Card } from '../components/ui/Card'
+import { Button } from '../components/ui/Button'
 
 export function UserManagement() {
   const users = [

@@ -1,4 +1,4 @@
-import { Suspense } from 'react'
+import { Suspense, lazy } from 'react'
 import { Routes, Route, Navigate } from 'react-router-dom'
 import { useAuth } from './stores/auth-store'
 import { Layout } from './layouts/Layout'
@@ -16,7 +16,7 @@ function ProtectedRoute({ children }: { children: React.ReactNode }) {
 }
 
 function RepoMFE() {
-  const RepoApp = React.lazy(() => import('mfe-repo/App'))
+  const RepoApp = lazy(() => import('mfe-repo/App'))
   return (
     <Suspense fallback={<LoadingPage />}>
       <RepoApp />
@@ -25,7 +25,7 @@ function RepoMFE() {
 }
 
 function TaskMFE() {
-  const TaskApp = React.lazy(() => import('mfe-task/App'))
+  const TaskApp = lazy(() => import('mfe-task/App'))
   return (
     <Suspense fallback={<LoadingPage />}>
       <TaskApp />
@@ -34,7 +34,7 @@ function TaskMFE() {
 }
 
 function SettingMFE() {
-  const SettingApp = React.lazy(() => import('mfe-setting/App'))
+  const SettingApp = lazy(() => import('mfe-setting/App'))
   return (
     <Suspense fallback={<LoadingPage />}>
       <SettingApp />
@@ -69,8 +69,6 @@ function AppRoutes() {
     </Routes>
   )
 }
-
-import React from 'react'
 
 export default function App() {
   return <AppRoutes />

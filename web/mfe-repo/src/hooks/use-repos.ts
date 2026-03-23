@@ -1,6 +1,6 @@
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query'
-import { repoApi } from 'host/services/api'
-import type { Repository, CreateRepoRequest } from 'host/types'
+import { repoApi } from '../services/api'
+import type { Repository } from '../types'
 
 export function useRepos() {
   return useQuery<Repository[]>({

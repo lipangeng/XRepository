@@ -21,9 +21,4 @@ export default defineConfig({
     target: 'esnext',
     minify: 'esbuild',
   },
-  resolve: {
-    alias: {
-      'host': '/src',
-    },
-  },
 })
