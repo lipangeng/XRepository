@@ -8,11 +8,12 @@ export default defineConfig({
     react(),
     tailwindcss(),
     federation({
-      name: 'mfe-setting',
+      name: 'mfe_setting',
       filename: 'remoteEntry.js',
       exposes: {
         './App': './src/App.tsx',
-        './routes': './src/routes.tsx',
+        './UserManagement': './src/pages/UserManagement.tsx',
+        './SystemSettings': './src/pages/SystemSettings.tsx',
       },
       shared: ['react', 'react-dom', 'react-router-dom', '@tanstack/react-query', 'axios'],
     }),

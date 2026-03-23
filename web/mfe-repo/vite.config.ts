@@ -8,11 +8,15 @@ export default defineConfig({
     react(),
     tailwindcss(),
     federation({
-      name: 'mfe-repo',
+      name: 'mfe_repo',
       filename: 'remoteEntry.js',
       exposes: {
         './App': './src/App.tsx',
-        './routes': './src/routes.tsx',
+        './RepositoryList': './src/pages/RepositoryList.tsx',
+        './CreateRepository': './src/pages/CreateRepository.tsx',
+        './RepositoryDetail': './src/pages/RepositoryDetail.tsx',
+        './ArtifactBrowser': './src/pages/ArtifactBrowser.tsx',
+        './UploadArtifact': './src/pages/UploadArtifact.tsx',
       },
       shared: ['react', 'react-dom', 'react-router-dom', '@tanstack/react-query', 'axios'],
     }),

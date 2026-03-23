@@ -8,11 +8,13 @@ export default defineConfig({
     react(),
     tailwindcss(),
     federation({
-      name: 'mfe-task',
+      name: 'mfe_task',
       filename: 'remoteEntry.js',
       exposes: {
         './App': './src/App.tsx',
-        './routes': './src/routes.tsx',
+        './TaskList': './src/pages/TaskList.tsx',
+        './TaskDetail': './src/pages/TaskDetail.tsx',
+        './TriggerTask': './src/pages/TriggerTask.tsx',
       },
       shared: ['react', 'react-dom', 'react-router-dom', '@tanstack/react-query', 'axios'],
     }),
